@@ -13,6 +13,13 @@ import {
   Star,
 } from "lucide-react";
 
+// Performance logging
+const logPerformance = (action: string, data?: any) => {
+  if (process.env.NODE_ENV === "development") {
+    console.log(`[PERF] BackgroundAnimation: ${action}`, data ? data : "");
+  }
+};
+
 interface FloatingElement {
   id: number;
   icon: React.ComponentType<{ className?: string }>;
@@ -30,6 +37,8 @@ export default function ElegantBackgroundAnimation() {
   );
 
   useEffect(() => {
+    logPerformance("BackgroundAnimation mounted");
+
     const icons = [
       ChefHat,
       Utensils,
@@ -41,83 +50,38 @@ export default function ElegantBackgroundAnimation() {
       Star,
     ];
 
-    const elements: FloatingElement[] = Array.from({ length: 12 }, (_, i) => ({
+    // Reduced from 6 to 4 floating elements for better performance
+    const elements: FloatingElement[] = Array.from({ length: 4 }, (_, i) => ({
       id: i,
       icon: icons[i % icons.length],
       x: Math.random() * 100,
       y: Math.random() * 100,
-      size: Math.random() * 30 + 30, // 30-60px
-      opacity: Math.random() * 0.3 + 0.2, // 0.2-0.5
-      duration: Math.random() * 20 + 15, // 15-35s
-      delay: Math.random() * 10, // 0-10s delay
+      size: Math.random() * 15 + 15, // 15-30px (reduced from 20-40px)
+      opacity: Math.random() * 0.15 + 0.1, // 0.1-0.25 (reduced from 0.1-0.3)
+      duration: Math.random() * 20 + 20, // 20-40s (increased from 10-25s for slower movement)
+      delay: Math.random() * 10, // 0-10s delay (increased for more spread)
     }));
 
     setFloatingElements(elements);
+    logPerformance("Floating elements initialized", { count: elements.length });
   }, []);
 
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
-      {/* Elegant Shimmer Effect */}
+      {/* Simplified Shimmer Effect */}
       <div className="absolute inset-0">
         <div
-          className="absolute inset-0 bg-gradient-to-r from-transparent via-amber-400/5 to-transparent animate-shimmer"
+          className="absolute inset-0 bg-gradient-to-r from-transparent via-amber-400/2 to-transparent"
           style={{
             background:
-              "linear-gradient(90deg, transparent 0%, rgba(255,215,0,0.03) 25%, rgba(255,215,0,0.08) 50%, rgba(255,215,0,0.03) 75%, transparent 100%)",
+              "linear-gradient(90deg, transparent 0%, rgba(255,215,0,0.01) 25%, rgba(255,215,0,0.02) 50%, rgba(255,215,0,0.01) 75%, transparent 100%)",
             transform: "translateX(-100%)",
-            animation: "shimmer 8s ease-in-out infinite",
+            animation: "shimmer 20s ease-in-out infinite", // Much slower animation
           }}
         />
       </div>
 
-      {/* Elegant Rotating Decorative Rings */}
-      <div className="absolute inset-0 flex items-center justify-center">
-        <div className="relative">
-          {/* Outer Ring */}
-          <motion.div
-            animate={{ rotate: 360 }}
-            transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
-            className="absolute w-96 h-96 rounded-full"
-            style={{
-              background:
-                "conic-gradient(from 0deg, transparent 0deg, rgba(255,215,0,0.02) 90deg, transparent 180deg, rgba(255,215,0,0.02) 270deg, transparent 360deg)",
-              transform: "translate(-50%, -50%)",
-              left: "50%",
-              top: "50%",
-            }}
-          />
-
-          {/* Inner Ring */}
-          <motion.div
-            animate={{ rotate: -360 }}
-            transition={{ duration: 45, repeat: Infinity, ease: "linear" }}
-            className="absolute w-64 h-64 rounded-full"
-            style={{
-              background:
-                "conic-gradient(from 0deg, transparent 0deg, rgba(255,215,0,0.03) 120deg, transparent 240deg, rgba(255,215,0,0.03) 360deg)",
-              transform: "translate(-50%, -50%)",
-              left: "50%",
-              top: "50%",
-            }}
-          />
-
-          {/* Center Ring */}
-          <motion.div
-            animate={{ rotate: 360 }}
-            transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-            className="absolute w-32 h-32 rounded-full"
-            style={{
-              background:
-                "conic-gradient(from 0deg, transparent 0deg, rgba(255,215,0,0.04) 60deg, transparent 120deg, rgba(255,215,0,0.04) 180deg, transparent 240deg, rgba(255,215,0,0.04) 300deg, transparent 360deg)",
-              transform: "translate(-50%, -50%)",
-              left: "50%",
-              top: "50%",
-            }}
-          />
-        </div>
-      </div>
-
-      {/* Floating Culinary Icons */}
+      {/* Simplified Floating Culinary Icons */}
       {floatingElements.map((element) => {
         const IconComponent = element.icon;
         return (
@@ -129,12 +93,11 @@ export default function ElegantBackgroundAnimation() {
               top: `${element.y}%`,
             }}
             animate={{
-              y: [0, -30, 0],
-              x: [0, 15, -15, 0],
-              rotate: [0, 360],
+              y: [0, -15, 0], // Reduced movement
+              x: [0, 8, -8, 0], // Reduced movement
               opacity: [
                 element.opacity,
-                element.opacity * 0.6,
+                element.opacity * 0.8,
                 element.opacity,
               ],
             }}
@@ -144,51 +107,57 @@ export default function ElegantBackgroundAnimation() {
               delay: element.delay,
               ease: "easeInOut",
             }}
+            onAnimationStart={() => {
+              logPerformance("Floating element animation started", {
+                id: element.id,
+              });
+            }}
           >
             <div
               style={{
                 width: `${element.size}px`,
                 height: `${element.size}px`,
-                filter: "blur(0.5px)",
               }}
             >
-              <IconComponent className="text-amber-400/50 w-full h-full" />
+              <IconComponent className="text-amber-400/30 w-full h-full" />
             </div>
           </motion.div>
         );
       })}
 
-      {/* Subtle Particle Field */}
+      {/* Simplified Particle Field - Reduced from 4 to 2 particles */}
       <div className="absolute inset-0">
-        {Array.from({ length: 8 }).map((_, i) => (
+        {Array.from({ length: 2 }).map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-1 h-1 bg-amber-400/20 rounded-full"
+            className="absolute w-1 h-1 bg-amber-400/10 rounded-full"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
             }}
             animate={{
-              opacity: [0.1, 0.3, 0.1],
-              scale: [0.5, 1.2, 0.5],
-              y: [0, -100, 0],
+              opacity: [0.1, 0.15, 0.1],
+              scale: [0.5, 0.8, 0.5],
+              y: [0, -30, 0], // Reduced movement
             }}
             transition={{
-              duration: Math.random() * 10 + 8,
+              duration: Math.random() * 15 + 10, // Increased duration
               repeat: Infinity,
               delay: Math.random() * 5,
               ease: "easeInOut",
+            }}
+            onAnimationStart={() => {
+              logPerformance("Particle animation started", { id: i });
             }}
           />
         ))}
       </div>
 
-      {/* Elegant Border Glow */}
+      {/* Simplified Border Glow */}
       <div
-        className="absolute inset-0 border border-amber-400/5 rounded-lg"
+        className="absolute inset-0 border border-amber-400/2 rounded-lg"
         style={{
-          boxShadow:
-            "inset 0 0 50px rgba(255,215,0,0.02), 0 0 100px rgba(255,215,0,0.01)",
+          boxShadow: "inset 0 0 20px rgba(255,215,0,0.005)", // Reduced glow
         }}
       />
     </div>

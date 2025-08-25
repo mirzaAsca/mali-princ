@@ -1,0 +1,481 @@
+"use client";
+
+import { motion } from "framer-motion";
+import {
+  PartyPopper,
+  Music,
+  Star,
+  MapPin,
+  Clock,
+  Award,
+  Phone,
+  Calendar,
+  Package,
+  Truck,
+  Zap,
+  Users,
+} from "lucide-react";
+import Image from "next/image";
+
+export default function UslugeIznajmljivanjaOpremeZabaveSarajevoPage() {
+  const partyEquipmentImages = [
+    "/gallery/Ketering_Hulk/HulkApps_Ketering.jpg",
+    "/gallery/Ketering_Hulk/HulkApps_Ketering-2.jpg",
+    "/gallery/Ketering_Hulk/HulkApps_Ketering-3.jpg",
+    "/gallery/Ketering_Hulk/HulkApps_Ketering-4.jpg",
+    "/gallery/Ketering_Hulk/HulkApps_Ketering-5.jpg",
+    "/gallery/Ketering_Hulk/HulkApps_Ketering-6.jpg",
+  ];
+
+  const services = [
+    {
+      icon: PartyPopper,
+      title: "Najam Opreme za Zabave",
+      description: "Kompletna oprema za zabave i događaje u Sarajevu",
+      features: [
+        "Muzička oprema",
+        "Dekorativni elementi",
+        "Osvetljenje",
+        "Posebni efekti",
+      ],
+    },
+    {
+      icon: Music,
+      title: "Muzička Oprema",
+      description:
+        "Profesionalna muzička oprema za sve vrste zabava u Sarajevu",
+      features: [
+        "Zvučnici i mikrofoni",
+        "Mikserske table",
+        "Instrumenti",
+        "DJ oprema",
+      ],
+    },
+    {
+      icon: Package,
+      title: "Dostava i Montaža",
+      description:
+        "Profesionalna dostava i montaža opreme za zabave u Sarajevu",
+      features: [
+        "Besplatna dostava",
+        "Profesionalna montaža",
+        "Testiranje opreme",
+        "Obuka osoblja",
+      ],
+    },
+  ];
+
+  const areas = [
+    "Centar Sarajeva",
+    "Novo Sarajevo",
+    "Ilidža",
+    "Vogošća",
+    "Hadžići",
+    "Ilijaš",
+    "Trnovo",
+    "Pale",
+  ];
+
+  const process = [
+    {
+      number: "01",
+      title: "Konsultacija",
+      description: "Razumijemo vaše potrebe za opremu za zabave u Sarajevu",
+    },
+    {
+      number: "02",
+      title: "Izbor Opreme",
+      description: "Biramo najbolju opremu za vaš događaj",
+    },
+    {
+      number: "03",
+      title: "Dostava",
+      description: "Dostavljamo i montiramo opremu",
+    },
+    {
+      number: "04",
+      title: "Podrška",
+      description: "Obezbeđujemo kontinuiranu podršku",
+    },
+  ];
+
+  const stats = [
+    { icon: Star, number: "1000+", label: "Zadovoljnih Klijenata" },
+    { icon: Award, number: "5+", label: "Godina Garancije" },
+    { icon: Users, number: "24/7", label: "Podrška" },
+  ];
+
+  const partyFeatures = [
+    "Muzička oprema",
+    "Dekorativni elementi",
+    "Osvetljenje",
+    "Posebni efekti",
+    "Dostava i montaža",
+    "Profesionalna podrška",
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-[#0F0F0F] via-[#1B1C21] to-[#0F0F0F]">
+      {/* Hero Section with Party Theme */}
+      <section className="relative py-32 px-4 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-amber-900/35 to-amber-600/35"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_75%,rgba(255,215,0,0.15),transparent_55%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_25%,rgba(255,215,0,0.15),transparent_55%)]"></div>
+        <div className="relative max-w-7xl mx-auto text-center z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <div className="mb-8">
+              <motion.div
+                initial={{ scale: 0, rotate: 180 }}
+                animate={{ scale: 1, rotate: 0 }}
+                transition={{ duration: 1, delay: 0.3 }}
+                className="inline-block p-4 bg-gradient-to-r from-amber-500 to-amber-600 rounded-full mb-6"
+              >
+                <PartyPopper className="w-12 h-12 text-white" />
+              </motion.div>
+            </div>
+            <h1 className="text-5xl md:text-7xl font-bold mb-8 text-luxury">
+              Usluge Iznajmljivanja Opreme za Zabave Sarajevo
+            </h1>
+            <p className="text-xl md:text-2xl mb-8 text-elegant max-w-4xl mx-auto">
+              Mali Princ - vaš pouzdan partner za najam opreme za zabave u
+              Sarajevu. Specijalizovani smo za muzičku opremu, dekorativne
+              elemente i sve što vam treba za savršenu zabavu.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+              <a
+                href="tel:+387603203835"
+                className="btn-premium flex items-center gap-3 text-lg px-8 py-4 group"
+              >
+                <Phone className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                Pozovite 060 320 3835
+              </a>
+              <a
+                href="/kontakt"
+                className="glass-card px-8 py-4 text-elegant hover:text-luxury transition-all duration-300 hover:shadow-gold"
+              >
+                <Calendar className="w-5 h-5 inline mr-2" />
+                Zatražite Katalog
+              </a>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Floating Stats with Party Design */}
+      <section className="py-16 px-4 -mt-16 relative z-20">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {stats.map((stat, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
+                className="glass-card rounded-2xl p-8 text-center hover:shadow-gold transition-all duration-500 group border border-amber-500/20"
+              >
+                <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-amber-500 to-amber-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <stat.icon className="w-8 h-8 text-white" />
+                </div>
+                <div className="text-4xl font-bold text-luxury mb-2">
+                  {stat.number}
+                </div>
+                <div className="text-elegant">{stat.label}</div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Party Features Grid */}
+      <section className="py-24 px-4">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-luxury">
+              Naše Zabave Karakteristike
+            </h2>
+            <p className="text-xl text-elegant max-w-3xl mx-auto">
+              Sve što vam treba za savršenu zabavu u Sarajevu
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+            {partyFeatures.map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
+                className="glass-card rounded-xl p-6 text-center hover:shadow-gold transition-all duration-300 group cursor-pointer border border-amber-500/20"
+              >
+                <div className="w-12 h-12 mx-auto mb-4 bg-gradient-to-br from-amber-500 to-amber-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <Zap className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-luxury group-hover:text-amber-400 transition-colors">
+                  {feature}
+                </h3>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Image Gallery with Party Layout */}
+      <section className="py-24 px-4 bg-premium-card relative">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.7 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-luxury">
+              Naša Oprema za Zabave
+            </h2>
+            <p className="text-xl text-elegant max-w-3xl mx-auto">
+              Pogledajte naše najbolje opreme za zabave u Sarajevu
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {partyEquipmentImages.map((image, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
+                className="group relative overflow-hidden rounded-2xl glass-card hover:shadow-gold transition-all duration-500 border border-amber-500/20"
+              >
+                <Image
+                  src={image}
+                  alt={`Oprema za zabave ${index + 1} - Mali Princ Sarajevo`}
+                  width={400}
+                  height={300}
+                  className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <h3 className="text-lg font-semibold">Oprema {index + 1}</h3>
+                  <p className="text-sm">Sarajevo, Bosna i Hercegovina</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section with Party Cards */}
+      <section className="py-24 px-4">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.9 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-luxury">
+              Naše Zabave Usluge
+            </h2>
+            <p className="text-xl text-elegant max-w-3xl mx-auto">
+              Kompletno rješenje za opremu za zabave u Sarajevu.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 1.0 + index * 0.1 }}
+                className="glass-card rounded-2xl p-8 text-center hover:shadow-gold transition-all duration-500 group relative overflow-hidden border border-amber-500/20"
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-amber-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="relative z-10">
+                  <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-amber-500 to-amber-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <service.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4 text-luxury">
+                    {service.title}
+                  </h3>
+                  <p className="text-elegant mb-6 leading-relaxed">
+                    {service.description}
+                  </p>
+                  <ul className="space-y-2">
+                    {service.features.map((feature, featureIndex) => (
+                      <li
+                        key={featureIndex}
+                        className="text-elegant flex items-center justify-center gap-2"
+                      >
+                        <div className="w-2 h-2 bg-amber-500 rounded-full"></div>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Service Areas with Party Design */}
+      <section className="py-24 px-4 bg-premium-card relative">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 1.1 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-luxury">
+              Gde Pružamo Usluge Najma
+            </h2>
+            <p className="text-xl text-elegant max-w-3xl mx-auto">
+              Naše usluge najma su dostupne u svim dijelovima Sarajeva i okolnim
+              gradovima.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {areas.map((area, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: 1.2 + index * 0.05 }}
+                className="glass-card rounded-xl p-6 text-center hover:shadow-gold transition-all duration-300 group cursor-pointer border border-amber-500/20"
+              >
+                <MapPin className="w-8 h-8 mx-auto mb-3 text-amber-500 group-hover:scale-110 transition-transform duration-300" />
+                <h3 className="text-lg font-semibold text-luxury group-hover:text-amber-400 transition-colors">
+                  {area}
+                </h3>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Process Section with Party Timeline */}
+      <section className="py-24 px-4">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 1.3 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-luxury">
+              Kako Radimo
+            </h2>
+            <p className="text-xl text-elegant max-w-3xl mx-auto">
+              Naš 4-korakni proces osigurava da dobijete najbolju opremu za
+              zabave.
+            </p>
+          </motion.div>
+
+          <div className="relative">
+            {/* Party Timeline Line */}
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-2 h-full bg-gradient-to-b from-amber-500 to-amber-600 hidden lg:block rounded-full"></div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+              {process.map((step, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 1.4 + index * 0.1 }}
+                  className="glass-card rounded-2xl p-8 text-center hover:shadow-gold transition-all duration-500 group relative border border-amber-500/20"
+                >
+                  <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-amber-500 to-amber-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 relative z-10">
+                    <span className="text-2xl font-bold text-white">
+                      {step.number}
+                    </span>
+                  </div>
+                  <h3 className="text-xl font-bold mb-4 text-luxury">
+                    {step.title}
+                  </h3>
+                  <p className="text-elegant leading-relaxed">
+                    {step.description}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* About Section with Party Theme */}
+      <section className="py-24 px-4 bg-premium-card relative">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 1.5 }}
+            className="text-center"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-luxury">
+              O Nama - Mali Princ Najam Opreme za Zabave
+            </h2>
+            <div className="glass-card rounded-2xl p-8 text-center max-w-4xl mx-auto relative overflow-hidden border border-amber-500/20">
+              <div className="absolute inset-0 bg-gradient-to-r from-amber-500/5 to-amber-600/5"></div>
+              <div className="relative z-10">
+                <p className="text-elegant text-lg leading-relaxed">
+                  Mali Princ je vaš pouzdan partner za najam opreme za zabave u
+                  Sarajevu. Specijalizovani smo za muzičku opremu, dekorativne
+                  elemente i sve što vam treba za savršenu zabavu. Naš tim
+                  stručnjaka brine o svim detaljima.
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* CTA Section with Party Background */}
+      <section className="py-24 px-4 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-amber-900/30 via-amber-600/30 to-amber-900/30"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,215,0,0.1),transparent_70%)]"></div>
+        <div className="max-w-7xl mx-auto text-center relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 1.6 }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-luxury">
+              Spremni za Vašu Zabavu?
+            </h2>
+            <p className="text-xl text-elegant mb-8">
+              Kontaktirajte nas danas za besplatnu konsultaciju i
+              personalizovanu ponudu opreme za zabave u Sarajevu.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+              <a
+                href="tel:+387603203835"
+                className="btn-premium flex items-center gap-3 text-lg px-8 py-4 group"
+              >
+                <Phone className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                Pozovite Sada
+              </a>
+              <a
+                href="/kontakt"
+                className="glass-card px-8 py-4 text-elegant hover:text-luxury transition-all duration-300 hover:shadow-gold"
+              >
+                <Calendar className="w-5 h-5 inline mr-2" />
+                Zatražite Katalog
+              </a>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}

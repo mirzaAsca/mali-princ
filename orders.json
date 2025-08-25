@@ -1,0 +1,313 @@
+[
+  {
+    "id": "1754311862327",
+    "contact": {
+      "name": "mirza",
+      "phone": "061192042"
+    },
+    "event": {
+      "eventType": "Korporativni Event",
+      "date": "2025-08-04",
+      "peopleCount": 10,
+      "normPerPerson": 10,
+      "duration": "1-2 sata"
+    },
+    "food": {
+      "selectedGalleryItems": [
+        "/gallery/Ketering/Ketering_Hullk-2.jpg",
+        "/gallery/Ketering/Ketering_Hullk-6.jpg",
+        "/gallery/Ketering/Ketering_Hullk-7.jpg"
+      ],
+      "customPreferences": "sve volim",
+      "allergens": [
+        "Gluten",
+        "paprike"
+      ],
+      "selectedPackage": "Luksuzni Eventi Paket"
+    },
+    "accessories": {
+      "plates": true,
+      "balloons": true,
+      "redCarpet": true,
+      "royalPillow": false,
+      "decorations": true,
+      "staffCount": 1
+    },
+    "submittedAt": "2025-08-04T12:51:02.327Z",
+    "status": "pending"
+  },
+  {
+    "id": "1754312980850",
+    "contact": {
+      "name": "Asca",
+      "phone": "061192042"
+    },
+    "event": {
+      "eventType": "Poslovni Ručak",
+      "date": "2025-08-04",
+      "peopleCount": 15,
+      "normPerPerson": 9,
+      "duration": "3+ sata",
+      "time": "12:00"
+    },
+    "food": {
+      "selectedGalleryItems": [
+        "/gallery/Ketering/Ketering_Hullk-2.jpg",
+        "/gallery/Ketering/Ketering_Hullk-6.jpg",
+        "/gallery/Ketering/Ketering_Hullk-7.jpg"
+      ],
+      "customPreferences": "volim sve",
+      "allergens": [
+        "Orah",
+        "Riba",
+        "kesten"
+      ],
+      "selectedPackage": "Premium Catering Paket"
+    },
+    "accessories": {
+      "plates": true,
+      "balloons": true,
+      "redCarpet": false,
+      "royalPillow": false,
+      "decorations": false,
+      "staffCount": 2
+    },
+    "submittedAt": "2025-08-04T13:09:40.850Z",
+    "status": "pending"
+  },
+  {
+    "id": "1754313448244",
+    "contact": {
+      "name": "Mirza Asceric",
+      "phone": "061192042"
+    },
+    "event": {
+      "eventType": "Poslovni Ručak",
+      "date": "2025-08-19",
+      "peopleCount": 10,
+      "normPerPerson": 7,
+      "duration": "3+ sata"
+    },
+    "food": {
+      "selectedGalleryItems": [
+        "/gallery/Ketering/Ketering_Hullk-2.jpg",
+        "/gallery/Ketering/Ketering_Hullk-19.jpg",
+        "/gallery/Ketering/Ketering_Hullk-4.jpg",
+        "/gallery/Ketering/Ketering_Hullk-13.jpg"
+      ],
+      "customPreferences": "daj mesa",
+      "allergens": [
+        "Gluten",
+        "Orah",
+        "janje"
+      ],
+      "selectedPackage": "Luksuzni Eventi Paket"
+    },
+    "accessories": {
+      "plates": true,
+      "balloons": true,
+      "redCarpet": false,
+      "royalPillow": false,
+      "decorations": false,
+      "staffCount": 2
+    },
+    "submittedAt": "2025-08-04T13:17:28.244Z",
+    "status": "pending"
+  },
+  {
+    "id": "1754313873034",
+    "contact": {
+      "name": "ssaads",
+      "phone": ""
+    },
+    "event": {
+      "eventType": "Poslovni Ručak",
+      "date": "2025-08-22",
+      "peopleCount": 10,
+      "normPerPerson": 6,
+      "duration": "3+ sata",
+      "time": "14:00"
+    },
+    "food": {
+      "selectedGalleryItems": [
+        "/gallery/Ketering/Ketering_Hullk-3.jpg",
+        "/gallery/Ketering/Ketering_Hullk-9.jpg",
+        "/gallery/Ketering/Ketering_Hullk-2.jpg",
+        "/gallery/Ketering/Ketering_Hullk-24.jpg"
+      ],
+      "customPreferences": "davaj svega",
+      "allergens": [
+        "Gluten",
+        "Orah",
+        "riba"
+      ],
+      "selectedPackage": "Office Food Paket"
+    },
+    "accessories": {
+      "plates": true,
+      "balloons": true,
+      "redCarpet": false,
+      "royalPillow": false,
+      "decorations": false,
+      "staffCount": 2
+    },
+    "submittedAt": "2025-08-04T13:24:33.034Z",
+    "status": "pending"
+  },
+  {
+    "id": "1754314177418",
+    "contact": {
+      "name": "Ascaa",
+      "phone": "061192042"
+    },
+    "event": {
+      "eventType": "Rođendan",
+      "date": "2025-08-12",
+      "peopleCount": 20,
+      "normPerPerson": 7,
+      "duration": "1-2 sata",
+      "time": "14:00"
+    },
+    "food": {
+      "selectedGalleryItems": [
+        "/gallery/Ketering/Ketering_Hullk-2.jpg",
+        "/gallery/Ketering/Ketering_Hullk-19.jpg",
+        "/gallery/Ketering/Ketering_Hullk-4.jpg",
+        "/gallery/Ketering/Ketering_Hullk-17.jpg",
+        "/gallery/Ketering/Ketering_Hullk-18.jpg"
+      ],
+      "customPreferences": "davaj zdrave hrane",
+      "allergens": [
+        "Gluten",
+        "Orah",
+        "paprika"
+      ],
+      "selectedPackage": "Office Food Paket"
+    },
+    "accessories": {
+      "plates": true,
+      "balloons": true,
+      "redCarpet": true,
+      "royalPillow": false,
+      "decorations": false,
+      "staffCount": 2
+    },
+    "submittedAt": "2025-08-04T13:29:37.418Z",
+    "status": "pending"
+  },
+  {
+    "id": "1754314361736",
+    "contact": {
+      "name": "Samra Bandic",
+      "phone": "0603203835"
+    },
+    "event": {
+      "eventType": "Korporativni Event",
+      "date": "2025-08-22",
+      "peopleCount": 25,
+      "normPerPerson": 6,
+      "duration": "1-2 sata",
+      "time": "12:00"
+    },
+    "food": {
+      "selectedGalleryItems": [
+        "/gallery/Ketering/Ketering_Hullk-2.jpg",
+        "/gallery/Ketering/Ketering_Hullk-19.jpg",
+        "/gallery/Ketering/Ketering_Hullk-10.jpg",
+        "/gallery/Ketering/Ketering_Hullk-21.jpg",
+        "/gallery/Ketering/Ketering_Hullk-9.jpg"
+      ],
+      "customPreferences": "Volim janje",
+      "allergens": [
+        "Laktoza",
+        "neslano janje"
+      ],
+      "selectedPackage": "Luksuzni Eventi Paket"
+    },
+    "accessories": {
+      "plates": true,
+      "balloons": true,
+      "redCarpet": false,
+      "royalPillow": false,
+      "decorations": false,
+      "staffCount": 2
+    },
+    "submittedAt": "2025-08-04T13:32:41.736Z",
+    "status": "pending"
+  },
+  {
+    "id": "1754495110106",
+    "contact": {
+      "name": "Asca",
+      "phone": "061192042"
+    },
+    "event": {
+      "eventType": "Korporativni Event",
+      "date": "",
+      "peopleCount": 4,
+      "normPerPerson": 9,
+      "duration": "3+ sata",
+      "time": "20:00"
+    },
+    "food": {
+      "selectedGalleryItems": [
+        "/gallery/Ketering/Ketering_Hullk-3.jpg",
+        "/gallery/Ketering/Ketering_Hullk-2.jpg",
+        "/gallery/Ketering/Ketering_Hullk-6.jpg",
+        "/gallery/Ketering/Ketering_Hullk-7.jpg",
+        "/gallery/Ketering/Ketering_Hullk-20.jpg"
+      ],
+      "customPreferences": "hrana",
+      "allergens": [
+        "Orah"
+      ],
+      "selectedPackage": "Office Food Paket"
+    },
+    "accessories": {
+      "plates": true,
+      "balloons": true,
+      "redCarpet": false,
+      "royalPillow": false,
+      "decorations": false,
+      "staffCount": 0
+    },
+    "submittedAt": "2025-08-06T15:45:10.106Z",
+    "status": "pending"
+  },
+  {
+    "id": "1755780958104",
+    "contact": {
+      "name": "Mirza Asceric",
+      "phone": "061277272882"
+    },
+    "event": {
+      "eventType": "Rođendan",
+      "date": "2025-08-21",
+      "peopleCount": 4,
+      "normPerPerson": 6,
+      "duration": "1-2 sata"
+    },
+    "food": {
+      "selectedGalleryItems": [
+        "/gallery/Ketering/Ketering_Hullk-3.jpg",
+        "/gallery/Ketering/Ketering_Hullk-7.jpg",
+        "/gallery/Ketering/Ketering_Hullk-6.jpg"
+      ],
+      "customPreferences": "ssss",
+      "allergens": [
+        "Orah"
+      ],
+      "selectedPackage": "Premium Catering Paket"
+    },
+    "accessories": {
+      "plates": true,
+      "balloons": true,
+      "redCarpet": true,
+      "royalPillow": false,
+      "decorations": false,
+      "staffCount": 0
+    },
+    "submittedAt": "2025-08-21T12:55:58.104Z",
+    "status": "pending"
+  }
+]

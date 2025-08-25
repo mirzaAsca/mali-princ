@@ -1,0 +1,33 @@
+1. create products on gbp - mirror that on our website
+2. Nest packages under dropdown with dedicated pages for each
+3. Implement schema.org for GMB https://developers.google.com/search/docs/appearance/structured-data/local-business
+4. Google Maps profile embedded into contact page
+5. Create external links for each page
+6. Add 4–9 secondary GBP categories (max 10 total) matching services
+7. Add 30+ explicit GBP services with accurate names and pricing notes
+8. Complete all GBP fields (description, hours, attributes, photos, Q&A)
+9. Ensure NAP consistency (Name, Address, Phone) across site, GBP, and new citations
+10. Homepage: set title = Primary GBP category + city (e.g., Catering Sarajevo)
+11. Homepage: add H2 sections for each secondary GBP category with 200–300 words each
+12. Create a page for each GBP category (URL includes category + Sarajevo)
+13. Create a page for each GBP service (URL, title, H1, intro include service + Sarajevo)
+14. Add neighborhood/local venues mentions on all service/category pages
+15. Implement LocalBusiness JSON-LD on homepage matching GBP exactly (character-for-character)
+16. Add internal linking: homepage -> categories; categories -> services; services cross-link
+17. Update sitemap to include all new category and service pages; submit in Search Console
+18. Embed GBP map on contact page with business CID link; add driving directions link
+19. Create/claim key citations (Bing Places, Apple Maps, Yelp, Facebook, Foursquare)
+20. Create local authority links: join Sarajevo Chamber of Commerce; 1–2 local sponsorships
+21. Create/refresh social profiles with exact NAP; link back to site and GBP
+22. Add review acquisition CTA on site; reply to all GBP reviews with keywords
+23. Compress and geotag images; add alt text with service + city on new pages
+24. Track calls and form fills; add UTM parameters to GBP website and call links
+25. Re-run indexing: request indexing for all new pages after publish
+26. WAIT LIST FOR OFFICE FOOD
+27. ✅ nav-paketi-dropdown - Add Paketi dropdown in navigation mirroring Usluge
+28. ✅ paketi-page-refactor - Refactor paketi page to concise cards linking to detail pages
+29. ✅ create-paket-pages - Create dedicated paket pages (7) under app/paketi/\* with branding
+30. ✅ sitemap-paketi-update - Update sitemap to include all paket pages
+31. 🔄 mobile-paketi-dropdown - Wire mobile menu for Paketi dropdown (like Usluge)
+32. ✅ remove-catering-organizator - Remove Catering Organizator package and page
+33. ✅ standardize-paketi-naming - Update all paketi pages to follow "Catering za..." naming convention

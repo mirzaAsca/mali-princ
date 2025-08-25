@@ -94,6 +94,14 @@ const FAQ_ITEMS: FAQItem[] = [
     category: "Rezervacija",
     icon: Phone,
   },
+  {
+    id: "9",
+    question: "Koja su pravila otkazivanja i povrata?",
+    answer:
+      "Otkazivanje do 72h prije događaja je bez naknade. Između 72h i 24h zadržavamo depozit od 30%. Otkazivanje unutar 24h naplaćuje se 70% zbog troškova nabavke i pripreme.",
+    category: "Rezervacija",
+    icon: Calendar,
+  },
 ];
 
 const CATEGORIES = [
@@ -251,61 +259,6 @@ export default function FAQSection({ className = "" }: FAQSectionProps) {
             </motion.div>
           </AnimatePresence>
         </div>
-
-        {/* Still Have Questions CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="mt-16 text-center"
-        >
-          <div className="glass-card rounded-2xl p-8 md:p-12 max-w-2xl mx-auto">
-            <div className="text-amber-400 mb-4 flex justify-center">
-              <MessageCircle className="w-12 h-12" />
-            </div>
-
-            <h3 className="text-2xl md:text-3xl font-bold text-elegant mb-4">
-              Još Uvijek Imate Pitanja?
-            </h3>
-
-            <p className="text-amber-400/80 text-lg mb-8">
-              Naš tim je spreman da odgovori na sva vaša pitanja i pomoći vam u
-              organizaciji savršenog događaja.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="btn-premium text-lg px-8 py-4 rounded-full font-semibold flex items-center gap-2 mx-auto sm:mx-0"
-              >
-                <Phone className="w-5 h-5" />
-                Pozovite Nas
-              </motion.button>
-
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="btn-outline-premium text-lg px-8 py-4 rounded-full font-semibold flex items-center gap-2 mx-auto sm:mx-0"
-              >
-                <MessageCircle className="w-5 h-5" />
-                Pošaljite Poruku
-              </motion.button>
-            </div>
-
-            {/* Contact Info */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8 pt-8 border-t border-amber-400/20">
-              <div className="text-center">
-                <div className="text-amber-400 font-medium mb-1">Telefon</div>
-                <div className="text-elegant">+387 60 320 3835</div>
-              </div>
-              <div className="text-center">
-                <div className="text-amber-400 font-medium mb-1">Email</div>
-                <div className="text-elegant">vip@maliprinc.ba</div>
-              </div>
-            </div>
-          </div>
-        </motion.div>
       </div>
 
       {/* Decorative Elements */}
