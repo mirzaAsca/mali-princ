@@ -15,16 +15,23 @@ interface PartnersStripProps {
 }
 
 const DEFAULT_LOGOS: PartnerLogo[] = [
-  { alt: "PowerCommerce", src: "/logos/logotype_PowerCommerce_1.svg" },
-  { alt: "FlyRank", src: "/logos/FlyRank_Website_Logo.svg" },
-  { alt: "Praella", src: "/logos/Praella_Logo.svg" },
-  { alt: "Hulk Apps", src: "/logos/Hulk_Logo_New_200x.svg" },
   {
     alt: "Google Developers",
     src: "/logos/png-transparent-google-developers-google-developer-expert-web-development-google-developer-groups-google-text-logo-web-hosting-service.png",
   },
-  { alt: "Shop Circle", src: "/logos/Shop Circle.svg" },
+  {
+    alt: "Tershouse",
+    src: "/logos/tershouse.png",
+  },
+  { alt: "FlyRank", src: "/logos/FlyRank_Website_Logo.svg" },
+  { alt: "Shop Circle", src: "/logos/SC_Logo_1.svg" },
+
   { alt: "Ergomed", src: "/logos/Ergomed_Cover.webp" },
+
+  { alt: "Praella", src: "/logos/Praella_Logo.svg" },
+  { alt: "Hulk Apps", src: "/logos/Hulk_Logo_New_200x.svg" },
+
+  { alt: "PowerCommerce", src: "/logos/logotype_PowerCommerce.svg" },
 ];
 
 export default function PartnersStrip({

@@ -309,5 +309,44 @@
     },
     "submittedAt": "2025-08-21T12:55:58.104Z",
     "status": "pending"
+  },
+  {
+    "id": "1756212169836",
+    "contact": {
+      "name": "Irma Spaho",
+      "phone": "080000"
+    },
+    "event": {
+      "eventType": "Korporativni Event",
+      "date": "2025-08-22",
+      "peopleCount": 4,
+      "normPerPerson": 9,
+      "duration": "1-2 sata",
+      "time": "19:00"
+    },
+    "food": {
+      "selectedGalleryItems": [
+        "/gallery/Ketering/Ketering_Hullk-2.jpg",
+        "/gallery/Ketering/Ketering_Hullk-6.jpg",
+        "/gallery/Ketering/Ketering_Hullk-9.jpg"
+      ],
+      "customPreferences": "meso",
+      "allergens": [
+        "Gluten",
+        "Orah",
+        "nepeceno janje"
+      ],
+      "selectedPackage": "Office Food Paket"
+    },
+    "accessories": {
+      "plates": true,
+      "balloons": true,
+      "redCarpet": false,
+      "royalPillow": false,
+      "decorations": false,
+      "staffCount": 2
+    },
+    "submittedAt": "2025-08-26T12:42:49.836Z",
+    "status": "pending"
   }
 ]

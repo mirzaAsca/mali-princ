@@ -19,6 +19,11 @@ import {
   ArrowRight,
   ChevronLeft,
   ChevronRight,
+  Trophy,
+  Heart,
+  Cake,
+  Gift,
+  Baby,
 } from "lucide-react";
 import OfferCreatorModal from "../components/OfferCreatorModal";
 import { AnimatePresence } from "framer-motion";
@@ -200,6 +205,7 @@ export default function Homepage() {
         }
       >
         <PartnersStrip />
+        <CaseStudyFeatureSection />
         <BenefitsSection />
         <StepsSection />
         <BeforeAfterTransformationSection />
@@ -278,10 +284,7 @@ function HeroSection({
                 <Star className="w-5 h-5 fill-amber-400" />
                 <span>5.0 ⭐ Google Reviews</span>
               </div>
-              {/* <div className="flex items-center gap-2">
-                <Award className="w-5 h-5" />
-                <span>100% Zadovoljstvo Klijenata</span>
-              </div> */}
+              {/* <div className="flex items-center gap-2"><Award className="w-5 h-5" /><span>100% Zadovoljstvo Klijenata</span></div> */}
             </motion.div>
 
             {/* Main Headline */}
@@ -292,7 +295,7 @@ function HeroSection({
               className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-luxury leading-tight"
             >
               Premium catering &
-              <span className="text-luxury bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent ml-3">
+              <span className="text-lucury bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent ml-3">
                 organizator događanja
               </span>
             </motion.h1>
@@ -1033,6 +1036,261 @@ function FeaturesSection() {
               <p className="text-elegant text-lg">{feature.description}</p>
             </motion.div>
           ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function CaseStudyFeatureSection() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  useEffect(() => {
+    if (isInView) {
+      logPerformance("VIP Partners section in view");
+    }
+  }, [isInView]);
+
+  const vipPackages = [
+    {
+      key: "office",
+      icon: Utensils,
+      title: "OFFICE FOOD",
+      blurb: "Topli dnevni obroci na vašu adresu",
+      href: "/paketi/office-food",
+      basePrice: 25,
+      minPeople: 5,
+      features: [
+        "Svježe pripremljen ukusan i topao obrok",
+        "Dostavka u tačno dogovorenom vremenu",
+        "Mjesečni meni prilagođen vašim željama",
+      ],
+      image: "/gallery/Ketering_board_v2/Ketering_Investitori_v2-4.jpg",
+    },
+    {
+      key: "eventi",
+      icon: Trophy,
+      title: "EVENTI",
+      blurb: "Korporativni i protokolarni eventi",
+      href: "/paketi/catering-za-evente",
+      basePrice: 100,
+      minPeople: 20,
+      features: [
+        "Meni po mjeri za vaš event",
+        "Profesionalna koordinacija",
+        "Premium dekoracija i setup",
+      ],
+      image: "/gallery/Ketering_board/Ketering_Investitori-21.jpg",
+    },
+    {
+      key: "vjencanja",
+      icon: Heart,
+      title: "VJENČANJA",
+      blurb: "Bez stresa — buffet ili posluživanje",
+      href: "/paketi/catering-za-vjencanja",
+      basePrice: 70,
+      minPeople: 30,
+      features: [
+        "Svečani meni (buffet ili posluživanje)",
+        "Desertna zona i torta (opcija)",
+        "Dekoracija stolova i šatora",
+      ],
+      image: "/gallery/Ketering_board_v2/Ketering_Investitori_v2-27.jpg",
+    },
+    {
+      key: "rodjendani",
+      icon: Cake,
+      title: "ROĐENDANI",
+      blurb: "Tematska dekoracija, kolači i zalogaji",
+      href: "/paketi/catering-za-rodjendane",
+      basePrice: 50,
+      minPeople: 15,
+      features: [
+        "Tematska dekoracija",
+        "Kolači i zalogaji za sve uzraste",
+        "Stolovi i stolice uključeni",
+      ],
+      image: "/gallery/Ketering_Hulk/HulkApps_Ketering-11.jpg",
+    },
+    {
+      key: "djevojacko",
+      icon: Sparkles,
+      title: "DJEVOJAČKO VEČE",
+      blurb: "Fotogeničan setup i finger food",
+      href: "/paketi/catering-za-djevojacko-vece",
+      basePrice: 59,
+      minPeople: 12,
+      features: [
+        "Fotogeničan setup",
+        "Finger food i ženski vibe",
+        "Teme i floristika",
+      ],
+      image: "/gallery/Ketering_board_v2/Ketering_Investitori_v2-10.jpg",
+    },
+    {
+      key: "baby",
+      icon: Baby,
+      title: "BABY SHOWER",
+      blurb: "Pastelne dekoracije i candy bar",
+      href: "/paketi/catering-za-baby-shower",
+      basePrice: 54,
+      minPeople: 12,
+      features: [
+        "Pastelne dekoracije",
+        "Candy bar i emotivna atmosfera",
+        "Gift box i voćni aranžmani",
+      ],
+      image: "/gallery/Ketering_board_v2/Ketering_Investitori_v2-2.jpg",
+    },
+    {
+      key: "godisnjice",
+      icon: Gift,
+      title: "GODIŠNJICE",
+      blurb: "Romantični setup i luksuzno posuđe",
+      href: "/paketi/catering-za-godisnjice",
+      basePrice: 63,
+      minPeople: 10,
+      features: [
+        "Romantični setup za dvoje",
+        "Svijeće i luksuzno posuđe",
+        "Mali gathering opcija",
+      ],
+      image: "/gallery/Ketering_Hulk/HulkApps_Ketering-10.jpg",
+    },
+  ];
+
+  return (
+    <section
+      ref={ref}
+      className="py-36 md:py-40 px-6 relative overflow-visible bg-premium-card"
+    >
+      <div className="max-w-7xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-10"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-luxury">
+            Odaberite paket
+          </h2>
+          <p className="text-xl text-elegant max-w-3xl mx-auto">
+            Posebne cijene i prioritetna usluga za naše najvjernije klijente.
+            Ponuda vrijedi samo za mjesec Septembar.
+          </p>
+        </motion.div>
+
+        {/* Horizontal Scrollable Carousel */}
+        <div className="relative mt-8 mb-20">
+          <div className="flex gap-6 overflow-x-auto overflow-y-visible snap-x snap-mandatory scroll-smooth pt-16 pb-12">
+            {vipPackages.map((pkg, index) => {
+              const discounted = Math.round(pkg.basePrice * 0.6);
+              return (
+                <motion.div
+                  key={pkg.key}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.5, delay: index * 0.05 }}
+                  className="relative group snap-start min-w-[300px] md:min-w-[360px] flex-shrink-0"
+                >
+                  {/* Unified top-left label style */}
+                  <div className="absolute top-2 left-2 z-40">
+                    {pkg.key === "eventi" && (
+                      <span className="inline-flex items-center gap-1 bg-gradient-to-r from-amber-400 to-amber-600 text-black px-3 py-1 rounded-full text-xs font-bold shadow-md">
+                        -30% za VIP partnere
+                      </span>
+                    )}
+                    {pkg.key === "vjencanja" && (
+                      <span className="inline-flex items-center gap-1 bg-gradient-to-r from-amber-400 to-amber-600 text-black px-3 py-1 rounded-full text-xs font-bold shadow-md">
+                        Najpopularnije
+                      </span>
+                    )}
+                    {pkg.key === "office" && (
+                      <span className="inline-flex items-center gap-1 bg-gradient-to-r from-amber-400 to-amber-600 text-black px-3 py-1 rounded-full text-xs font-bold shadow-md">
+                        Uskoro
+                      </span>
+                    )}
+                  </div>
+
+                  <div
+                    className={`glass-card relative rounded-2xl p-6 border border-amber-400/20 min-h-[560px]`}
+                  >
+                    {/* Package Image */}
+                    {pkg.image && (
+                      <div
+                        className={`relative h-32 mb-4 rounded-lg overflow-hidden ${
+                          pkg.key === "office" ? "grayscale" : ""
+                        }`}
+                      >
+                        <Image
+                          src={pkg.image}
+                          alt={pkg.title}
+                          fill
+                          className="object-cover"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                      </div>
+                    )}
+
+                    {/* Package Header */}
+                    <div className="flex items-center gap-4 mb-6">
+                      <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-amber-600 rounded-full flex items-center justify-center">
+                        <pkg.icon className="w-8 h-8 text-white" />
+                      </div>
+                      <div>
+                        <h3 className="text-2xl font-bold text-luxury">
+                          {pkg.title}
+                        </h3>
+                        <p className="text-elegant text-sm">{pkg.blurb}</p>
+                      </div>
+                    </div>
+
+                    {/* Features - Using real data */}
+                    <div className="space-y-2 mb-6">
+                      {pkg.features.map((feature, fIndex) => (
+                        <div
+                          key={fIndex}
+                          className="flex items-center gap-2 text-sm text-elegant"
+                        >
+                          <div className="w-2 h-2 bg-amber-400 rounded-full"></div>
+                          {feature}
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* CTA - Waitlist for Office Food */}
+                    <div className="text-center pt-2">
+                      <Link
+                        href={pkg.key === "office" ? "/kontakt" : pkg.href}
+                        className="btn-premium text-base px-8 py-3 rounded-full font-semibold inline-flex items-center justify-center w-full"
+                      >
+                        {pkg.key === "office" ? "Obavijesti me" : "Odaberi"}
+                      </Link>
+                    </div>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* View All Packages CTA */}
+        <div className="text-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/paketi" className="btn-premium text-base px-8 py-4">
+              Pogledajte sve pakete →
+            </Link>
+            <Link
+              href="/kontakt"
+              className="btn-outline-premium text-base px-8 py-4"
+            >
+              Zatražite VIP ponudu
+            </Link>
+          </div>
+          <p className="text-sm text-elegant mt-4 opacity-80">
+            * VIP partneri imaju prioritet u rezervacijama i posebne uslovе
+          </p>
         </div>
       </div>
     </section>

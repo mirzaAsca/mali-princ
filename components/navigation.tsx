@@ -58,6 +58,7 @@ export function Navigation() {
 
   const otherMenuItems = [
     { href: "/galerija", label: "Galerija" },
+    { href: "/case-study-shop-circle", label: "Case Study" },
     { href: "/kontakt", label: "Kontakt" },
   ];
 
